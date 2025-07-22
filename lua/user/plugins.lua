@@ -28,7 +28,7 @@ end
 
 lazy.setup({
   -- Install your plugins here
-  { "folke/lazy.nvim", tag = "stable" },
+  { "folke/lazy.nvim",      tag = "stable" },
   { "nvim-lua/plenary.nvim" }, -- Useful lua functions used by lots of plugins
   {
     "numToStr/Comment.nvim",
@@ -36,7 +36,7 @@ lazy.setup({
     event = "User FileOpened",
   },
   { "JoosepAlviste/nvim-ts-context-commentstring", lazy = true },
-  { "kyazdani42/nvim-web-devicons", lazy = true },
+  { "kyazdani42/nvim-web-devicons",                lazy = true },
   {
     "akinsho/bufferline.nvim",
     event = "User FileOpened",
@@ -109,7 +109,7 @@ lazy.setup({
   },
 
   -- Colorschemes
-  { "folke/tokyonight.nvim", lazy = false },
+  { "folke/tokyonight.nvim",    lazy = false },
   { "lunarvim/darkplus.nvim" },
   { "folke/todo-comments.nvim", event = "BufRead" },
   {
@@ -118,7 +118,7 @@ lazy.setup({
   },
   { "neanias/everforest-nvim", lazy = false },
   { "LunarVim/primer.nvim" },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "catppuccin/nvim",         name = "catppuccin", priority = 1000 },
 
   -- Color
   {
@@ -171,6 +171,13 @@ lazy.setup({
       "MunifTanjim/nui.nvim",
     },
   },
+  {
+    "echasnovski/mini.nvim",
+    version = false,
+    config = function()
+      require("mini.icons").setup()
+    end
+  },
 
   {
     "ghillb/cybu.nvim",
@@ -183,9 +190,9 @@ lazy.setup({
   },
 
   -- Cmp
-  { "hrsh7th/nvim-cmp" }, -- The completion plugin
-  { "hrsh7th/cmp-buffer" }, -- buffer completions
-  { "hrsh7th/cmp-path" }, -- path completions
+  { "hrsh7th/nvim-cmp" },         -- The completion plugin
+  { "hrsh7th/cmp-buffer" },       -- buffer completions
+  { "hrsh7th/cmp-path" },         -- path completions
   { "saadparwaiz1/cmp_luasnip" }, -- snippet completions
   { "hrsh7th/cmp-nvim-lsp" },
   { "hrsh7th/cmp-nvim-lua" },
@@ -199,14 +206,14 @@ lazy.setup({
     build = "make install_jsregexp",
     event = "InsertEnter",
     lazy = true,
-  }, --snippet engine
+  },                                  --snippet engine
   { "rafamadriz/friendly-snippets" }, -- a bunch of snippets to use
 
   -- LSP
-  { "neovim/nvim-lspconfig", lazy = true }, -- enable LSP
-  { "williamboman/mason.nvim", lazy = true }, -- simple to use language server installer
+  { "neovim/nvim-lspconfig",             lazy = true }, -- enable LSP
+  { "williamboman/mason.nvim",           lazy = true }, -- simple to use language server installer
   { "williamboman/mason-lspconfig.nvim", lazy = true },
-  { "nvimtools/none-ls.nvim", lazy = true }, -- for formatters and linters
+  { "nvimtools/none-ls.nvim",            lazy = true }, -- for formatters and linters
   -- {
   --   "j-hui/fidget.nvim",
   --   branch = "legacy",
@@ -215,13 +222,13 @@ lazy.setup({
   --   end,
   --   enabled = true,
   -- },
-  { "lvimuser/lsp-inlayhints.nvim", lazy = true },
+  { "lvimuser/lsp-inlayhints.nvim",      lazy = true },
   {
     "RRethy/vim-illuminate",
     event = "User FileOpened",
     lazy = true,
   },
-  { "SmiteshP/nvim-navic", event = "User FileOpened" },
+  { "SmiteshP/nvim-navic",          event = "User FileOpened" },
   -- {
   --   "Exafunction/codeium.vim",
   --   config = function()
